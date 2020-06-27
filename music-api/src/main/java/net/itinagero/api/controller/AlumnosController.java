@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,12 @@ public class AlumnosController {
 	
 	@PostMapping("/albums")
 	public Album guardar(@RequestBody Album album) {
+		serviceAlbum.guarda(album);
+		return album;
+	}
+	
+	@PutMapping("/albums")
+	public Album modificar(@RequestBody Album album) {
 		serviceAlbum.guarda(album);
 		return album;
 	}
