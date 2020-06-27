@@ -8,4 +8,5 @@ public interface IAlbumService {
 
 	List<Album> buscarTodos();
 	void guarda(Album album);
+	void borrar(int idAlbum);
 }

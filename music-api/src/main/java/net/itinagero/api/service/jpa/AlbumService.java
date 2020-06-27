@@ -26,4 +26,9 @@ public class AlbumService implements IAlbumService {
 		
 	}
 
+	@Override
+	public void borrar(int idAlbum) {
+		repoAlbums.deleteById(idAlbum);
+	}
+
 }
