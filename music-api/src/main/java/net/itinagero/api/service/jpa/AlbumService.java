@@ -20,4 +20,10 @@ public class AlbumService implements IAlbumService {
 		return repoAlbums.findAll();
 	}
 
+	@Override
+	public void guarda(Album album) {
+		repoAlbums.save(album);
+		
+	}
+
 }

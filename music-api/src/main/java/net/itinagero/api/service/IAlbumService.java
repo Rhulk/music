@@ -7,4 +7,5 @@ import net.itinagero.api.entity.Album;
 public interface IAlbumService {
 
 	List<Album> buscarTodos();
+	void guarda(Album album);
 }
